@@ -8,7 +8,7 @@ All other live cells die in the next generation. Similarly, all other dead cells
 """
 
 
-
+print("something is greather than nothing ig.")
 import os
 import sys
 from copy import deepcopy
