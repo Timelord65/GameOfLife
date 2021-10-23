@@ -24,7 +24,7 @@ class Conway:
 
 if __name__ == "__main__":
     
-    size = [100, 100]
+    size = [1000, 1000]
     intial_state = np.random.random(size[0] * size[1])
     intial_state = intial_state.reshape(size[0], size[1]).round()
     print(intial_state.shape)
@@ -41,6 +41,6 @@ if __name__ == "__main__":
         img_plot.set_data(A.state)
         plt.show()
         plt.pause(0.01)
-        #plt.draw()
+        
 
         #time.sleep(0.01)
