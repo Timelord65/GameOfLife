@@ -11,9 +11,8 @@ class Conway:
         self.state = state
         
     def run(self):
-        
         convo = np.array([[1, 1, 1], [1, 0, 1], [1, 1, 1]])
-        b = signal.convolve2d(self.state, convo, mode = 'same', boundary = 'wrap')
+        b = signal.convolve2d(self.state, convo, mode = 'same', boundary = 'fill')
         c = np.zeros(self.size)
         c[np.where((b == 2) & (self.state == 1))] = 1
         c[np.where((b == 3) & (self.state == 1))] = 1
@@ -27,17 +26,21 @@ if __name__ == "__main__":
     
     size = [100, 100]
     intial_state = np.random.random(size[0] * size[1])
-    intial_state = intial_state.reshape(100, 100).round()
+    intial_state = intial_state.reshape(size[0], size[1]).round()
     print(intial_state.shape)
     res = [80, 80]
 
     A = Conway(intial_state, size, res)
     print(A.state.shape)
-    plt.figure()
+    fig = plt.figure()
     img_plot = plt.imshow(A.state, interpolation="nearest", cmap = plt.cm.gray)
-    plt.show(block=False)
+    
+    
     while True:
         A.run()
         img_plot.set_data(A.state)
-        plt.draw()
-        time.sleep(0.01)
+        plt.show()
+        plt.pause(0.01)
+        #plt.draw()
+
+        #time.sleep(0.01)
