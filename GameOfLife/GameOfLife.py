@@ -24,11 +24,11 @@ class Conway:
 
 if __name__ == "__main__":
     
-    size = [1000, 1000]
+    size = [100, 100]
     intial_state = np.random.random(size[0] * size[1])
     intial_state = intial_state.reshape(size[0], size[1]).round()
     print(intial_state.shape)
-    res = [80, 80]
+    
 
     A = Conway(intial_state, size, res)
     print(A.state.shape)
