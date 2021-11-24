@@ -17,3 +17,9 @@ Rules:
 - Any dead cell touching exactly three alive neighbours becomes alive.
 
 As a virtue of it's turing completeness, you could come up with some interesting stuff such as [turing machines running in the game of life](https://youtu.be/HeQX2HjkcNo?t=1774). 
+
+# How to run it:
+```sh
+cd GameOfLife
+python3 GameOfLife.py
+```
