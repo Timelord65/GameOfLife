@@ -1,5 +1,5 @@
 # **Conway's Game of Life**
-## A Cellular Automata
+## A Cellular Automaton
 
 ![Example Image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Game_of_life_Simkin_glider_gun.svg/749px-Game_of_life_Simkin_glider_gun.svg.png)
 
