@@ -25,6 +25,7 @@ class Conway:
 if __name__ == "__main__":
     
     size = [100, 100]
+    res = []
     intial_state = np.random.random(size[0] * size[1])
     intial_state = intial_state.reshape(size[0], size[1]).round()
     print(intial_state.shape)
